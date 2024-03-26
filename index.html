@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<style>
+.droptarget {
+	width: 100px; 
+	height: 35px;
+	padding: 10px;
+	border: 1px solid black;
+}
+</style>
+<body>
+	<h1>1) Escreva um programa em JavaScript que apresente uma caixa de alerta para o usuário com uma informação qualquer.</h1>
+	<br>
+
+	<h1>2) Crie um  script em que o usuário clicará com o botão e em seguida uma mensagem de alerta será apresentada com uma mensagem qualquer.</h1>
+		<button onclick="botao()">Clique aqui</button>
+	<br>
+
+	<h1>3)  De exemplo dos seguintes formas de trabalhar com DOM(Document Object Model).</h1>
+		<h2>document.getElementById</h2>
+			<p>Este método retorna os elementos que estiverem com uma ID específica delarada. Exemplo: todo parágrafo com o id "ex1", ficará vermelho.</p>
+			<p id="3Ex1">Exemplo 1</p>
+	<br>
+		<h2>document.getElementsByTagName</h2>
+			<p>Retorna todos elementos contendo o nome da tag passada. Exemplo: todo título com a tag "h3" ficará azul.</p>
+			<h3>Exemplo 2</h3>
+	<br>
+		<h2>document.getElementsByClassName</h2>
+			<p>Retorna todos elementos que estiverem contendo o nome da classe passada. Exemplo: todo parágrafo com a class "ex3" ficará verde.</p>
+			<p class="3Ex3">Exemplo 3</p>
+	<br>
+		<h2>document.querySelector</h2>
+			<p>Retorna o primeiro elemento que se equipara ao seletor CSS passado. Exemplo: somente o primeiro elemento "li" ficará amarelo.</p>
+			<dl>
+				<dt>Exemplo 4 (1)</dt>
+				<dt>Exemplo 4 (2)</dt>
+			</dl>
+	<br>
+		<h2>document.querySelectorAll</h2>
+			<p>Retorna todos elementos que se equiparam ao seletor CSS passado. Exemplo: todo elemento dd ficará rosa.</p>
+			<dl>
+				<dd>Exemplo 5 (1)</dd>
+				<dd>Exemplo 5 (2)</dd>
+			</dl>
+	<br>
+
+	<h1>4) Descreva e crie exemplos com suas formas diferente eventos no javascript,segue alguns exemplo:</h1>
+		<h2>onmouseover</h2>
+			<p>Evento que ocorre quando o ponteiro do mouse passa por um elemento.</p>
+			<p id="4Ex1">Ao passar o mouse neste texto, ele ficará vermelho.</p>
+	<br>
+		<h2>onfocus</h2>
+			<p>Evento que ocorre quando um elemento obtém o foco.</p>
+				Clique nesta caixa de texto para que fique amarela: <input type="text" id="4Ex2" onfocus="foco()">
+	<br>
+		<h2>onchange</h2>
+			<p>Evento que ocorre quando o valor de um elemento HTML é alterado.</p>
+			<p>Selecione um número para ser exibido.</p>
+			<select id="selecionado" onchange="mudar()">
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+			</select>
+			<p id="4Ex3"></p>
+	<br>
+		<h2>ondrop / ondragover / ondragstart / ondragend (Extras)</h2>
+			<p>O ondrop é um evento ocorre quando uma seleção arrastável é largada num alvo.</p>
+			<p>O ondragover é um evento ocorre quando uma seleção arrastável é arrastada sobre um destino.</p>
+			<p>O ondragstart é um evento ocorre quando o utilizador começa a arrastar uma seleção.</p>
+			<p>O ondragend é um evento ocorre quando um utilizador acaba de arrastar uma seleção.</p>
+	<br>
+				<p>O texto pode ser arrastado para o retângulo de baixo, e vice-versa.</p>
+				<div class="droptarget" ondrop="drop(event)" ondragover="allowDrop(event)">
+					<p ondragstart="dragStart(event)" ondragend="dragEnd(event)" draggable="true" id="dragtarget">Drag me!</p>
+				</div>
+	<br>
+				<div class="droptarget" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+	<br>
+
+	<h1>5) De exemplo de os tipos de funções:</h1>
+		<h2>Função Nomeada</h2>
+			<p>Função que tem um nome específico e pode ser invocada por este nome.</p>
+			<p id="mensagem"></p>	
+	<br>
+		<h2>Função Nomeada com argumento(parametro) e retorno</h2>
+			<p>Função que aceita argumentos como entrada e retorna um valor como resultado.</p>
+			<input id="numeroenviado">
+			<button onclick="mostraresultado()">Raiz Quadrada</button>
+			<p id="resultado"></p>
+	<br>
+		<h2>Função com Construtor</h2>
+			<p>Função usada para criar objetos de uma maneira conveniente, com propriedades e métodos específicos.</p>
+			<p id="mostrarcontr"></p>
+	<br>
+		<h2>Função Literal (variável)</h2>
+			<p>Função definida que não foi atribuída a uma variável ou a um nome específico.</p>
+			<button onclick="literal()">Clique aqui</button>
+	<br>
+		<h2>Função de Flecha(Arrow functions)</h2>
+			<p>Função mais concisa e simplificada, fornecendo uma sintaxe mais enxuta com caracteres que desenham uma flecha.</p>
+			<button id="flecha">Clique-me</button>
+	<br>
+
+	<h1>6)  Desenvolva um script qua ao clicar no botão conta o numero de vezes clicado, em que seja separado o HTML e o JavaScript.</h1>
+		<button id="contn" class="btn btn-primary" type="button">
+			<p>Quantidade de clicks: <strong><span class="quant">0</span></strong></p>
+		</button>
+	<br>
+
+	<h1>7) Crie uma função que receba uma string como parâmetro e retorne a mesma string com todas as letras em caixa alta. 
+	Utilize essa função para converter diferentes strings.</h1>
+		<input type="text" id="insiraString">
+		<button onclick="ParaCaixaAlta()">Converter para Caixa Alta</button>
+		<p id="result"></p>
+	<br>
+
+	<h1> 8) Crie uma função que receba dois números como parâmetros e retorne a soma deles. Utilize essa função para realizar somas diferentes.</h1>
+		<input type="number" id="numero1" placeholder="Número 1">
+		<input type="number" id="numero2" placeholder="Número 2">
+		<button onclick="soma()">Calcular Soma</button>
+		<p id="resultad"></p>
+</body>
+
+<script src="atividade.js"></script>
+</html>
